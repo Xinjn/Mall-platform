@@ -12,6 +12,9 @@ export default defineConfig({
       '~': path.resolve(__dirname, 'src')
     }
   },
+  build: {
+    assetsDir: 'assets'
+  },
   // 反向代理
   server: {
     proxy: {
