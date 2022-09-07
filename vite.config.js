@@ -13,7 +13,7 @@ export default defineConfig({
     }
   },
   build: {
-    assetsDir: 'assets'
+    assetsDir: './assets'
   },
   // 反向代理
   server: {

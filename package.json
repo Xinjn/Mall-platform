@@ -1,5 +1,5 @@
 {
-  "name": "shop-admin",
+  "name": "Mall",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -16,6 +16,7 @@
     "echarts": "^5.3.3",
     "element-plus": "^2.2.11",
     "gsap": "^3.10.4",
+    "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "tinymce": "^6.1.2",
     "universal-cookie": "^4.0.4",

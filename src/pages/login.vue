@@ -1,7 +1,17 @@
 <template>
     <el-row class="login-container">
+
+        <el-col :lg="16" :md="12" class="left">
+            <div>
+                <!-- <div>欢迎光临</div> -->
+                <!-- <div>此站点为演示地址</div> -->
+            </div>
+        </el-col>
         <el-col :lg="8" :md="12" class="right">
-            <h2 class="title">欢迎回来</h2>
+            <h2 class="title">
+                <img src="../assets/logo4.png" alt="">
+                欢迎回来
+            </h2>
             <div>
                 <span class="line"></span>
                 <span>账号密码登录</span>
@@ -9,14 +19,14 @@
             </div>
             <el-form ref="formRef" :rules="rules" :model="form" class="w-[250px]">
                 <el-form-item prop="username">
-                    <el-input v-model="form.username" placeholder="请输入用户名">
+                    <el-input v-model="form.username"  placeholder="用户名：admin">
                         <template #prefix>
                             <el-icon><user /></el-icon>
                         </template>
                     </el-input>
                 </el-form-item>
                 <el-form-item prop="password">
-                    <el-input type="password" v-model="form.password" placeholder="请输入密码" show-password>
+                    <el-input type="password" v-model="form.password"   placeholder="密码：admin" show-password>
                         <template #prefix>
                             <el-icon><lock /></el-icon>
                         </template>
@@ -27,20 +37,19 @@
                         <span class="login">登 录</span>    
                     </el-button>
                 </el-form-item>
+                <el-form-item>
+                  <el-button round color="#e3e7f1" class="w-[250px]" type="primary" >
+                      <span class="register">注 册</span>    
+                  </el-button>
+              </el-form-item>
             </el-form>
-            <div>
+            <!-- <div>
                 测试权限账号：<br>
                 超级管理员账号： admin 密码为：admin <br>
 
                 导入用户账号：<br>
                 可使用导入的用户名登录 密码统一为：admin 
-            </div>
-        </el-col>
-        <el-col :lg="16" :md="12" class="left">
-            <div>
-                <!-- <div>欢迎光临</div> -->
-                <!-- <div>此站点为演示地址</div> -->
-            </div>
+            </div> -->
         </el-col>
     </el-row>
 </template>
@@ -117,7 +126,8 @@ onBeforeUnmount(()=>{
     /* background: url(../assets/bg.jpg) */
 }
 .login-container::before {
-            background: url(../assets/bg.jpg) no-repeat ;
+            /* background: url(../assets/bg.jpg) no-repeat ; */
+            background: url(https://i.niupic.com/images/2022/09/07/a54U.jpg) no-repeat ;
             content: '';
             display: block;
             position: absolute;
@@ -142,8 +152,14 @@ onBeforeUnmount(()=>{
     @apply text-gray-200 text-sm;
 }
 .right .title{
-    @apply font-bold text-3xl text-gray-800;
-
+    @apply  font-bold text-3xl text-gray-800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+    margin-right:5px;
+    width:50px;
+  }
 }
 .right>div{
     @apply flex items-center justify-center my-5 text-gray-300 space-x-2;

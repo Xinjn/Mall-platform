@@ -48,7 +48,6 @@ onBeforeRouteUpdate((to,from)=>{
 const isCollapse = computed(()=> !(store.state.asideWidth == '250px'))
 
 const asideMenus = computed(()=>store.state.menus)
-
 const handleSelect = (e)=>{
     router.push(e)
 }

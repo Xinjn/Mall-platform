@@ -7,7 +7,6 @@
 
   <p align="center">
     <br />
-    <br />
     <a href="https://xinjn.github.io/mall-platform/dist/index.html">View Demo</a>
     ·
     <a href="https://github.com/Xinjn/mall-platform/issues">Report Bug</a>

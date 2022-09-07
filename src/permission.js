@@ -28,6 +28,7 @@ router.beforeEach(async (to, from, next) => {
   let hasNewRoutes = false
   if (token && !hasGetInfo) {
     let { menus } = await store.dispatch('getinfo')
+    console.log('menus', menus)
     hasGetInfo = true
     // 动态添加路由
     hasNewRoutes = addRoutes(menus)
