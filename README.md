@@ -17,9 +17,9 @@ Mall  商城管理平台集成了主控台、商品管理、用户管理、订�
 ## Preview
 
 
-<a href="https://github.com/Xinjn/imgup/issues">Report Bug</a>
+<a href="https://github.com/Xinjn/mall-platform/issues">Report Bug</a>
 ·
-<a href="https://github.com/Xinjn/imgup/issues">Request Feature</a>
+<a href="https://github.com/Xinjn/mall-platform/issues">Request Feature</a>
 
 ![img1](./src/assets/img1.jpeg)
 ![img2](./src/assets/img2.jpeg)
@@ -34,6 +34,37 @@ $ npm install
 ```bash
 $ npm run dev
 ```
+
+## Docker
+
+### Docker Development
+
+```JS
+docker build -t mall/vue-nginx .
+docker run -d --name mall-vue-nginx  -p 8888:80 mall/vue-nginx
+
+docker tag mall/vue-nginx xinjn/mall-vue-nginx:latest
+docker push xinjn/mall-vue-nginx:latest
+docker pull xinjn/mall-vue-nginx:latest
+
+docker run -d --name mall-vue-nginx  -p 8888:80 xinjn/mall-vue-nginx
+```
+
+
+### Docker Preview
+
+1. 通过 Docker Hub 平台，执行命令拉取 Docker 远程仓库镜像。
+
+```bash
+$ docker pull xinjn/mall-vue-nginx:latest
+```
+
+2. 运行启动容器服务命令后，访问 location:8888 进行启动预览
+
+```bash
+$ docker run -d --name mall-vue-nginx  -p 8888:80 xinjn/mall-vue-nginx
+```
+
 
 ## License
 
